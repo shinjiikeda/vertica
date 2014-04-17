@@ -33,6 +33,12 @@ module Vertica
     DATA_TYPES = DATA_TYPE_CONVERSIONS.map { |t| t[0] }
 
     def initialize(col)
+      if col[:data_type_oid] == 115
+        col[:data_type_oid] = 9
+      end
+      if col[:data_type_oid] == 116
+        col[:data_type_oid] = 3
+      end
       @type_modifier    = col[:type_modifier]
       @format           = col[:format_code] == 0 ? :text : :binary
       @table_oid        = col[:table_oid]
