@@ -18,8 +18,8 @@ about Vertica at http://www.vertica.com.
 
 Or add it to your Gemfile:
 
-    gem 'vertica'
-    # gem 'vertica', git: 'git://github.com/wvanbergen/vertica.git' # HEAD version
+    # gem 'vertica'
+    gem 'vertica', git: 'git@github.com:shinjiikeda/vertica.git' # HEAD version
 
 ### Compatiblity
 
